@@ -1186,12 +1186,18 @@ def argmax(a, axis=None, out=None, *, keepdims=np._NoValue):
     >>> a
     array([[10, 11, 12],
            [13, 14, 15]])
+    Function(np.armax()) returns the index of the maximum value in the flattened array. ( flattened array of a= array([10, 11, 12, 13, 14, 15]) )
+    Since the maximum value in 'a' is 15, which is located in the last element of the flattened array, the function returns the index 5.
     >>> np.argmax(a)
     5
     >>> np.argmax(a, axis=0)
     array([1, 1, 1])
+    The code np.argmax(a, axis=0) applies the argmax() function along the vertical axis of the array 'a', 
+    which means that it finds the index of the maximum value for each column of the array.
     >>> np.argmax(a, axis=1)
     array([2, 2])
+    The code np.argmax(a, axis=1) applies the argmax() function along the horizontal axis of the array 'a', 
+    which means that it finds the index of the maximum value for each row of the array.
 
     Indexes of the maximal elements of a N-dimensional array:
 
